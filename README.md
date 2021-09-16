@@ -36,9 +36,9 @@ Diffirences between this firmware and the standard original
 
 9 It should consume less power.This need testing. MPU6050 and DS18B20 is powered by GPIO and switch of during deep sleep. 
 
-10 One Micro USB port for charging and programming
+10 One Micro USB port for charging and programming.
 
-11 Less complicated cuircut. The Wemos Lolin has a build in charger
+11 Less complicated cuircut. The Wemos Lolin has a build in battery charger/power supply.
 
 1 Publish to ubidots and other services.	
 
@@ -58,7 +58,9 @@ Diffirences between this firmware and the standard original
 
 9 May consume more power.
 
-10 One Micro USB port for programming and one USB C port for charging
+10 One Micro USB port for programming and one USB C port for charging.
+
+11 ESP8266 D1 Mini does not have a battery charger/power supply.
 
 
 You will need an iSpindel / iTilt hardware and Cayenne credentials.
