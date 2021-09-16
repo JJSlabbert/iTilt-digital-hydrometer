@@ -3,13 +3,13 @@
 
 
 # INTRODUCTION
-An alternative firmware for the iSpindel WiFi hydrometer developed with the Arduino IDE and using Cayenne cloud service. 
-The iSpindel is an open source device used to measure the gravity (Density) of beer or cider. It can also be used to calculate the ABV (Alcohol by Volume) of you home brew beer.
-The iSpindel consist of an ESP8266 microcontroller, MPU6050 Gyroscope, battery and battery charger inside a PET Test tube.  The iSpindel is inserted into your brew before you add yeast. Initially your brew will have a high gravity (density) because of all the sugar in it. The iSpindel may tilt at about 60° (from a vertical line) in your brew. When your brew starts to ferment and sugar is turned into alcohol, the tilt will become more vertical. The gyroscope will continuously monitor this tilt, transform it into gravity and ABV (with a statistical model) and publish the results to the cloud.
+An alternative firmware (ESP8266 and ESP32 compatible) for the iSpindel WiFi hydrometer developed with the Arduino IDE and using Cayenne cloud service. This firmware was tested on original iSpindels and my iTilt version using an ESP32 Wemos Lolin.
+The iTilt is an open source device used to measure the gravity (Density) of beer or cider. It can also be used to calculate the ABV (Alcohol by Volume) of you home brew beer.
+The iTpindel consist of an ESP8266 microcontroller (or ESP32), MPU6050 Gyroscope, battery and battery charger inside a PET Test tube.  The iTilt is inserted into your brew before you add yeast. Initially your brew will have a high gravity (density) because of all the sugar in it. The iTilt may tilt at about 60° (from a vertical line) in your brew. When your brew starts to ferment and sugar is turned into alcohol, the tilt angle will reduce and the iTilt will become more vertical. The gyroscope will continuously monitor this tilt, transform it into gravity (with a statistical model) and ABV and publish the results to the cloud.
 
 More info on the iSpindel is available at https://www.ispindel.de/docs/README_en.html and https://github.com/universam1/iSpindel
 
-This guide is not about building an iSpindel, but about alternative firmware written in the Arduino IDE. The standard original firmware code was developed in PlatformIO and publishes data to Ubidots, Bierbot Bricks, Blynk etc and few other services. This original source code is complicated (for me) and I wanted something more simplified publishing to Cayenne https://cayenne.mydevices.com/ since I use Cayenne for my other projects.
+The standard original iSpindel firmware code was developed in PlatformIO and publishes data to Ubidots, Bierbot Bricks, Blynk etc and few other services. This original source code is complicated (for me) and I wanted something more simplified publishing to Cayenne https://cayenne.mydevices.com/ since I use Cayenne for my other projects.
 
 Diffirences between this firmware and the standard original
 
@@ -25,9 +25,11 @@ Diffirences between this firmware and the standard original
 
 5 WiFimanager configuration portal can be loaded while brewing.
 
-6 Polynomial calibration can be done in the WiFiManager Configuration portal with an easy to use wizard.
+6 Polynomial calibration can be done in the WiFiManager Configuration portal with an easy to use wizard. If you use the theoretical gravities suggested in the wizard, you do not even need an extra hydrometer to calibrate.
 
-7 Alcohol By Volume is calculated and published to Cayenne, together with Tilt, Current Gravity, Original Gravity, the Coefficients of the Polynomial, battery voltage and WiFi Signal Strength.
+7 Alcohol By Volume is calculated and published to Cayenne, together with Tilt, Current Gravity,Temperature, Original Gravity, the Coefficients of the Polynomial, battery voltage and WiFi Signal Strength.
+
+8 Can run on an ESP32 (Was tested on Wemos lolin 32) and ESP8266 (Wiring must be according to iSpindel standards)
 
 1 Publish to ubidots and other services.	
 
@@ -43,8 +45,10 @@ Diffirences between this firmware and the standard original
 
 7 Data published is Tilt, Gravity, Temperature, Battery Voltage and WiFi Signal Strength.
 
+8 Only run on ESP8266 
 
-You will need an iSpindel hardware and Cayenne credentials.
+
+You will need an iSpindel / iTilt hardware and Cayenne credentials.
 You need to be skilled in using the Arduino IDE or Loading bin file firmware on an ESP8266. I will not be Liable if you mess up your EPROM or damage anything. 
 
 # LIBRARY REQUIREMENTS
@@ -65,11 +69,11 @@ You need to be skilled in using the Arduino IDE or Loading bin file firmware on 
 
 -The LED_BUILTIN (Blue LED in my case) should flash
 
--Short the two reset pins ones, wait 2 seconds and short it again. It should flash about 10 times in about 2.3 seconds
+-Short the two reset pins and tilt the iTilt vertical (Cup, USB port must be on top)
 
--Place your iSpindel horizontal on a levelled surface
+-Place your iTilt horizontal on a levelled surface
 
--You will now see that the iSpindel created an Access point.
+-You will now see that the iTilt created an Access point.
 
 -Connect to the AP. Go to http://192.168.4.1 if it is not automaticly loaded.
 
@@ -81,7 +85,9 @@ You need to be skilled in using the Arduino IDE or Loading bin file firmware on 
 
 -Save the provided details.
 
--Reset your WiFimanager configuration portal by shorting the reset pins ones, wait 2 seconds and short it again.
+-Reset your WiFimanager configuration portal by shorting the reset pins and tilt the decice vertical.
+
+-Log into your iTilt AP again.
 
 -Make sure all details saved is correct in WiFi Configure WiFi.
 
@@ -89,14 +95,16 @@ You need to be skilled in using the Arduino IDE or Loading bin file firmware on 
 
 -Save the offset (remember to re select your internet access point and password)
 
--Reconect to the Configuration Portal. Do a polynomial calibration by following the wizard. Manualy enter the coefficients in the Configure WiFi page. SAVE. Reconect to Conf Portal (iSpindel_Cayenne)
+-Reconect to the Configuration Portal. Do a polynomial calibration by following the wizard. It is recomended to do easy calibration with 7 ordered pairs (sample size=7) of (tilt, gravity). You will need a jar (+/- 3L), clean water and 0.55 kg sugar. Manualy enter the coefficients in the Configure WiFi page. SAVE. Reconect to Conf Portal (iSpindel_Cayenne). 
 
--You can now enter your Original Gravity (if it is in the brew) from the Gravity reading 192.168.4.1/readings? . Provide your WiFi password again and save your new details.
+-You can now enter your Original Gravity (if the iTilt is in the brew) from the Gravity reading 192.168.4.1/readings? . Provide your WiFi password again and save your new details.
 
--Your iSpindel should start to publish to Cayenne.
+-Also change the WiFi Manager portal Time Out to about 300 seconds and the Data Publication Interval to 900 seconds (about 15 minutes).
+
+-Your iTilt should start to publish to Cayenne.
 
 # ENTERING THE WIFIMANAGER CONFIGURATION PORTAL AGAIN
--Short the Reset pin, wait 2 seconds, short it again. You need to get your timing right. 
+-Short the Reset pin while holding the iTilt vertical
 
 -While Brewing: Draw the iSpindel vertical against the plastic fermenter with a strong magnet. Keep it like that. The iSpindel will detect it is vertical when it wakes out of deep sleep. This may take time, dependent on your selected publication interval.
 
@@ -110,12 +118,11 @@ You need to be skilled in using the Arduino IDE or Loading bin file firmware on 
 
 10 Short flashes= WiFiManager Configuration portal will start in three minutes.
 
-LED on for 10 seconds= WiFiManager Configuration portal should run for about 3 munites
 
-# MODEL CALIBRATION (CALCULATION OF THE POLYNOMIAL)
+# NOTES ON MODEL CALIBRATION (CALCULATION OF THE POLYNOMIAL)
 -Reed the iSpindel documentation or follow the Polynomial Calibration Wizard. You will need ordered pairs of Measured tilt readings and Gravity readings. 
 
--The best polynomial is a 3rd degree of the form GRAVITY=Coefficient3 x Tilt^3+Coefficient2 x Tilt^2+Coefficient1 x Tilt+ConstantTerm
+-The best polynomial is a 3rd degree of the form GRAVITY=Coefficient3 x Tilt^3+Coefficient2 x Tilt^2+Coefficient1 x Tilt+ConstantTerm (^2 means to the power of 2)
 
 -While calculating your polynomial, you can set the Publication Interval to 0. This will ensure that the ESP8266 does not enter deep sleep and publish data about every 20 seconds to cayenne. 
 
