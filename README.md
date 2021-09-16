@@ -64,6 +64,12 @@ Diffirences between this firmware and the standard original
 You will need an iSpindel / iTilt hardware and Cayenne credentials.
 You need to be skilled in using the Arduino IDE or Loading bin file firmware on an ESP8266. I will not be Liable if you mess up your EPROM or damage anything. 
 
+# BUILD YOUR HARDWARE
+
+
+
+To Do: Eagle File PCB
+
 # LIBRARY REQUIREMENTS
 -WiFimanager (Install the latest from Github https://github.com/tzapu/WiFiManager). The arduino library 2.0.3-alpha is out dated and does not support firmware updates.
 
