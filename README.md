@@ -66,7 +66,7 @@ You need to be skilled in using the Arduino IDE or Loading bin file firmware on 
 
 # BUILD YOUR HARDWARE
 
-
+![fritzing](https://user-images.githubusercontent.com/38969599/133678056-34fe7e11-5b1d-4f01-8ef9-6abf6ba0c73c.jpg)
 
 To Do: Eagle File PCB
 
