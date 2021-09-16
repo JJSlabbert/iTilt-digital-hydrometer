@@ -13,7 +13,7 @@ The standard original iSpindel firmware code was developed in PlatformIO and pub
 
 Diffirences between this firmware and the standard original
 
-# iSpindel ArduinoIDE Cayenne	VS Standard Firmware                              
+# iTilt	VS iSpindel                              
 1 Publish to Cayenne.
 
 2 Developed in Arduino IDE.
@@ -29,7 +29,9 @@ Diffirences between this firmware and the standard original
 
 7 Alcohol By Volume is calculated and published to Cayenne, together with Tilt, Current Gravity,Temperature, Original Gravity, the Coefficients of the Polynomial, battery voltage and WiFi Signal Strength.
 
-8 Can run on an ESP32 (Was tested on Wemos lolin 32) and ESP8266 (Wiring must be according to iSpindel standards)
+8 Can run on an ESP32 (Was tested on Wemos lolin 32) and ESP8266 (Wiring must be according to iSpindel standards).
+
+9 It should consume less power. This need testing
 
 1 Publish to ubidots and other services.	
 
@@ -45,7 +47,9 @@ Diffirences between this firmware and the standard original
 
 7 Data published is Tilt, Gravity, Temperature, Battery Voltage and WiFi Signal Strength.
 
-8 Only run on ESP8266 
+8 Only run on ESP8266.
+
+9 May consume more power.
 
 
 You will need an iSpindel / iTilt hardware and Cayenne credentials.
