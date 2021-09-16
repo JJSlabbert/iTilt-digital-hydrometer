@@ -31,7 +31,11 @@ Diffirences between this firmware and the standard original
 
 8 Can run on an ESP32 (Was tested on Wemos lolin 32) and ESP8266 (Wiring must be according to iSpindel standards).
 
-9 It should consume less power. This need testing
+9 It should consume less power.This need testing. MPU6050 and DS18B20 is powered by GPIO and switch of during deep sleep. 
+
+10 One Micro USB port for charging and programming
+
+11 Less complicated cuircut. The Wemos Lolin has a build in charger
 
 1 Publish to ubidots and other services.	
 
@@ -50,6 +54,8 @@ Diffirences between this firmware and the standard original
 8 Only run on ESP8266.
 
 9 May consume more power.
+
+10 One Micro USB port for programming and one USB C port for charging
 
 
 You will need an iSpindel / iTilt hardware and Cayenne credentials.
