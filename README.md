@@ -161,9 +161,7 @@ To Do: Eagle File PCB
 -Rule of Thumb: If The Polynomial estimates gravity to high, reduce the Coefficient1 a little bit
 
 ![poly_calibration](https://user-images.githubusercontent.com/38969599/133906857-cb149c17-c7c6-483c-a914-3e74b0a77e5a.gif)
-
 ![poly_calibration_data2](https://user-images.githubusercontent.com/38969599/133906854-77b2b2e7-ef9d-4c58-ba83-5df17da5405b.gif)
-
 ![poly_calibration_results](https://user-images.githubusercontent.com/38969599/133906856-24bc782c-0fc9-43c5-b623-e3b3608200cb.gif)
 
 My results in Excel using the Data Analysis tool pack. You can see that the results calculated by the Polynomial Calibration Wizard corresponds with excel. You can also see that the Polynomial is closed to a perfect fit with a Coefficient of determination (R^2)=0.9998
