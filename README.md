@@ -156,16 +156,15 @@ To Do: Eagle File PCB
 
 -You can also access a Calibration Wizard 192.168.4.1/polynomialcalibrationstart? if you already have your calibration sample (ordered pairs of Tilt and Gravity). This Wizard uses a Least Squares algorithm to calculate the 3rd degree polynomial coefficients.
 
--If you struggle with the Maths, use the following Coefficients Coefficient3=0.000001000000000 Coefficient2=-0.000131373000000 Coefficient1=0.006967952000000 ConstantTerm=0.892383559880001
+-If you struggle with the Maths and the wizard, use the following Coefficients Coefficient3=0.000001000000000 Coefficient2=-0.000131373000000 Coefficient1=0.006967952000000 ConstantTerm=0.892383559880001
 
 -Rule of Thumb: If The Polynomial estimates gravity to high, reduce the Coefficient1 a little bit
 
-![poly_calibration](https://user-images.githubusercontent.com/38969599/132992002-ab579433-4a92-4a96-818b-3841509a92be.gif)
+![poly_calibration](https://user-images.githubusercontent.com/38969599/133906857-cb149c17-c7c6-483c-a914-3e74b0a77e5a.gif)
 
-![poly_calibration_data](https://user-images.githubusercontent.com/38969599/132991982-2d36d1d1-5fec-43dd-84c1-147c9e702671.gif)
+![poly_calibration_data2](https://user-images.githubusercontent.com/38969599/133906854-77b2b2e7-ef9d-4c58-ba83-5df17da5405b.gif)
 
-![poly_calibration_results](https://user-images.githubusercontent.com/38969599/132998861-b8906218-ea91-48b6-96f5-49a68f387ec0.gif)
-
+![poly_calibration_results](https://user-images.githubusercontent.com/38969599/133906856-24bc782c-0fc9-43c5-b623-e3b3608200cb.gif)
 
 My results in Excel using the Data Analysis tool pack. You can see that the results calculated by the Polynomial Calibration Wizard corresponds with excel. You can also see that the Polynomial is closed to a perfect fit with a Coefficient of determination (R^2)=0.9998
 
