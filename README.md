@@ -73,7 +73,7 @@ To Do: Eagle File PCB
 # LIBRARY REQUIREMENTS
 -WiFimanager (Install the latest from Github https://github.com/tzapu/WiFiManager). The arduino library 2.0.3-alpha is out dated and does not support firmware updates.
 
--ArduinoJson version (Install from Arduino IDE)
+-ArduinoJson version 6 (Install from Arduino IDE)
 
 -CayenneMQTT (Install from Arduino IDE), for iTilt v1.01 use ArduinoMqttClient
 
