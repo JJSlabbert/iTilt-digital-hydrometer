@@ -77,7 +77,7 @@ To Do: Eagle File PCB
 
 -ArduinoJson version (Install from Arduino IDE)
 
--CayenneMQTTE (Install from Arduino IDE)
+-CayenneMQTT (Install from Arduino IDE), for iTilt v1.01 use ArduinoMqttClient
 
 -OneWire (Install from Arduino IDE)
 
@@ -86,11 +86,11 @@ To Do: Eagle File PCB
 -MPU6050 (Install from Arduino IDE)
 
 # STEPS
--Load the Firmware from source or binary on your iSpindel
+-Load the Firmware from source or binary on your iSpindel. If you had the iSpindel firmware (or other firmware using EEPROM) installed, you may need format your SPIFFS. Read the disclaimer.
 
 -The LED_BUILTIN (Blue LED in my case) should flash
 
--Short the two reset pins and tilt the iTilt vertical (Cup, USB port must be on top)
+-Short the two reset pins (press reset) and tilt the iTilt vertical (Cup, USB port must be on top)
 
 -Place your iTilt horizontal on a levelled surface
 
@@ -198,5 +198,17 @@ Channel 11: WiFi Signal Strength (40-50 Excelent, 30-40 Good, 20-30 Reasonable, 
 
 ![image](https://user-images.githubusercontent.com/38969599/132103481-0bb79940-bee6-423e-93d6-77c358820f9c.png)
 
+# CHANGE LOG
+
+v1.01
+
+1) Replace the CayenneMQTT library with ArduinoMqttClient. This new library avoids the long loop in CayenneMQTT. The average time it takes to connect to WiFi, publish data and go to deep sleep is now less than 5 seconds.
+2) Optimize code, WiFiManager custom params is only created if the portal will run
+3) The Polynomial Calibration Wizard is improved. Instructions to use results from sugar wash calculaters is included.
+
+
 # DISCLAIMER
-Do not load this firmware if you do not know what you are doing. This firmware over write what is on the iSpindel. 
+Do not load this firmware if you do not know what you are doing. This firmware over write what is on the iSpindel. It formats a File System (Called SPIFFS) on your EEPROM. If want to revert back to the iSpindel software, you need format your SPIFFS. by loading https://github.com/JJSlabbert/iTilt/blob/main/format_esp_fact_defaults.ino.ino.d1_mini.bin or running https://github.com/JJSlabbert/iTilt/blob/main/format_esp_fact_defaults.ino 
+
+I do not take any responsibility for any damage caused.
+
