@@ -139,24 +139,22 @@ To Do: Eagle File PCB
 
 
 # NOTES ON MODEL CALIBRATION (CALCULATION OF THE POLYNOMIAL)
--Reed the iSpindel documentation or follow the Polynomial Calibration Wizard. You will need ordered pairs of Measured tilt readings and Gravity readings. 
+-You will need ordered pairs of Measured tilt readings and Gravity readings. Follow the wizard that use a sugar wash calculater to make sure your gravity readings is correct.
 
 -The best polynomial is a 3rd degree of the form GRAVITY=Coefficient3 x Tilt^3+Coefficient2 x Tilt^2+Coefficient1 x Tilt+ConstantTerm (^2 means to the power of 2)
 
--While calculating your polynomial, you can set the Publication Interval to 0. This will ensure that the ESP8266 does not enter deep sleep and publish data about every 20 seconds to cayenne. 
+-While calculating your polynomial, you can set the Publication Interval to 0. This will ensure that the ESP8266 (ESP32) does not enter deep sleep and publish data about every 20 seconds to cayenne. 
 
 -You can also get Tilt Readings from the senor reading page 192.168.4.1/readings? Make sure your portal time out(set in Configure WiFi) is long enought (9000 seconds) to finish calibration.
 
 ![sensor_readings](https://user-images.githubusercontent.com/38969599/132998146-87ccd30d-14bf-43a2-9055-540e98d72b95.gif)
 
 
--You can use the spreadsheet from www.ispindel.de to capture your data and calculate your coefficients of the polynomial.
-
--You can also access a Calibration Wizard 192.168.4.1/polynomialcalibrationstart? if you already have your calibration sample (ordered pairs of Tilt and Gravity). This Wizard uses a Least Squares algorithm to calculate the 3rd degree polynomial coefficients.
-
 -If you struggle with the Maths and the wizard, use the following Coefficients Coefficient3=0.000001000000000 Coefficient2=-0.000131373000000 Coefficient1=0.006967952000000 ConstantTerm=0.892383559880001
 
 -Rule of Thumb: If The Polynomial estimates gravity to high, reduce the Coefficient1 a little bit
+
+-If you already have a 2nd degree polynomial, you can use it and just make the coefficient of tilt^3 = 0.
 
 ![poly_calibration](https://user-images.githubusercontent.com/38969599/133906857-cb149c17-c7c6-483c-a914-3e74b0a77e5a.gif)
 ![poly_calibration_data2](https://user-images.githubusercontent.com/38969599/133906854-77b2b2e7-ef9d-4c58-ba83-5df17da5405b.gif)
