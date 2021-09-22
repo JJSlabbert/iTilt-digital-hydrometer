@@ -211,3 +211,13 @@ Do not load this firmware if you do not know what you are doing. This firmware o
 
 I do not take any responsibility for any damage caused.
 
+# LICENSE
+You are free to use this binary or source code (software) for non-commercial objectives, like home brewing for private use. 
+You may not include this software in a product that you cell or produce for commercial objectives. 
+You may not use this software for producing any commercial product that you cell. 
+You are not allowed to distribute this software. The copy right holder is the only legal distributor of this software. 
+If you want to use this software commercially, you need to get permission from the copyright owner. 
+Commercial Licenses will be available at a reasonable price. 
+Copy right holder: Jacobus Johannes Slabbert
+
+
