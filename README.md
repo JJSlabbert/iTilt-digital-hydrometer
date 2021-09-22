@@ -139,6 +139,9 @@ To Do: Eagle File PCB
 
 
 # NOTES ON MODEL CALIBRATION (CALCULATION OF THE POLYNOMIAL)
+
+https://user-images.githubusercontent.com/38969599/134277840-7fbd0afc-ea88-456a-885e-82393b596da0.mp4
+
 -You will need ordered pairs of Measured tilt readings and Gravity readings. Follow the wizard that use a sugar wash calculater to make sure your gravity readings is correct.
 
 -The best polynomial is a 3rd degree of the form GRAVITY=Coefficient3 x Tilt^3+Coefficient2 x Tilt^2+Coefficient1 x Tilt+ConstantTerm (^2 means to the power of 2)
