@@ -14,6 +14,8 @@ The standard original iSpindel firmware code was developed in PlatformIO and pub
 
 Diffirences between this firmware and the standard original
 
+<table border="1"><tr><td>iTilt</td><td>iSpindel</td></tr><table>
+
 # iTilt	VS iSpindel                              
 1 Publish to Cayenne.
 
