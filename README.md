@@ -144,15 +144,25 @@ My results in Excel using the Data Analysis tool pack. You can see that the resu
 # CAYENNE CHANNELS
 
 Channel 2: The Polynome (Coefficient T^3, T^2,.....Constant Term). Can not display on the Dashboard, See it in the Data Stream.
+  
 Channel 3: The Firmware Version. Can not display on the Dashboard, See it in the Data Stream.
+  
 Channel 4: Temperature in D Celcius
+  
 Channel 5: Tilt
+  
 Channel 6: Battery Voltage
+  
 Channel 7: Gravity
+  
 Channel 8: Publication Interval in seconds
+  
 Channel 9: Original Gravity
+  
 Channel 10: ABV
+  
 Channel 11: Signal Strength 
+  
 
 ![image](https://user-images.githubusercontent.com/38969599/132103481-0bb79940-bee6-423e-93d6-77c358820f9c.png)
 
@@ -161,8 +171,11 @@ Channel 11: Signal Strength
 v1.01
 
 1 Replace the CayenneMQTT library with ArduinoMqttClient. This new library avoids the long loop in CayenneMQTT. The average time it takes to connect to WiFi, publish data and go to deep sleep is now less than 5 seconds.
+  
 2 Optimize code, WiFiManager custom params is only created if the portal will run
+  
 3 The Polynomial Calibration Wizard is improved. Instructions to use results from sugar wash calculaters is included.
+  
 4 The cayenne chanels was updated.
 
   
@@ -186,11 +199,18 @@ I do not take any responsibility for any damage caused.
 
 # LICENSE
 You are free to use this binary or source code (software) for non-commercial objectives, like home brewing for private use. 
+  
 You may not include this software in a product that you cell or produce for commercial objectives. 
-You may not use this software for producing any commercial product that you cell. 
+  
+You may not use this software for producing any commercial product that you cell.
+  
 You are not allowed to distribute this software. The copy right holder is the only legal distributor of this software. 
+  
 If you want to use this software commercially, you need to get permission from the copyright owner. 
+  
 Commercial Licenses will be available at a reasonable price. 
+  
 Copy right holder: Jacobus Johannes Slabbert
+  
 
 
