@@ -174,7 +174,10 @@ v1.01
 1) Replace the CayenneMQTT library with ArduinoMqttClient. This new library avoids the long loop in CayenneMQTT. The average time it takes to connect to WiFi, publish data and go to deep sleep is now less than 5 seconds.
 2) Optimize code, WiFiManager custom params is only created if the portal will run
 3) The Polynomial Calibration Wizard is improved. Instructions to use results from sugar wash calculaters is included.
+  
+v1.02
 
+Improve Power management of the DS18B20 and MPU6050. They are only switched on for about a second to take proper readings.
 
 # DISCLAIMER
 Do not load this firmware if you do not know what you are doing. This firmware over write what is on the iSpindel. It formats a File System (Called SPIFFS) on your EEPROM. If want to revert back to the iSpindel software, you need format your SPIFFS. by loading https://github.com/JJSlabbert/iTilt/blob/main/format_esp_fact_defaults.ino.ino.d1_mini.bin or running https://github.com/JJSlabbert/iTilt/blob/main/format_esp_fact_defaults.ino 
