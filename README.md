@@ -36,8 +36,8 @@ You need to be skilled in using the Arduino IDE or Loading bin file firmware on 
  Note, My 2 ESP32 Wemos Lolins could not power the MPU6050 and DS18B20 via GPIO when on battery. You need to wire them with the 3.3 volt pin. On the ESP32 TTGO KOALA GPIO 16 and 17 was both able to power both the MPU6050 and DS18B20.
 
 ![fritzing](https://user-images.githubusercontent.com/38969599/134550321-57f0f657-c37c-428a-87b3-d3e5ef49a665.jpg)
-
-
+  
+ 
 To Do: Eagle File PCB
 
 # LIBRARY REQUIREMENTS
