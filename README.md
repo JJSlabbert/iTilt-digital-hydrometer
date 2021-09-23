@@ -143,29 +143,16 @@ My results in Excel using the Data Analysis tool pack. You can see that the resu
 
 # CAYENNE CHANNELS
 
-Channel 0: Constant Term
-
-Channel 1: Coefficient1 x 1000
-
-Channel 2: Coefficient2 x 1000
-
-Channel 3: Coefficient3 x 1000
-
-Channel 4: Temperature
-
+Channel 2: The Polynome (Coefficient T^3, T^2,.....Constant Term). Can not display on the Dashboard, See it in the Data Stream.
+Channel 3: The Firmware Version. Can not display on the Dashboard, See it in the Data Stream.
+Channel 4: Temperature in D Celcius
 Channel 5: Tilt
-
 Channel 6: Battery Voltage
-
-Channel 7: Gravity (Current)
-
-Channel 8: Publication Interval
-
+Channel 7: Gravity
+Channel 8: Publication Interval in seconds
 Channel 9: Original Gravity
-
-Channel 10: ABV Alcohol By Volume (Original Gravity-Gravity) X 131.258
-
-Channel 11: WiFi Signal Strength (40-50 Excelent, 30-40 Good, 20-30 Reasonable, 10-20 LOW, 0-10 Very Low)
+Channel 10: ABV
+Channel 11: Signal Strength 
 
 ![image](https://user-images.githubusercontent.com/38969599/132103481-0bb79940-bee6-423e-93d6-77c358820f9c.png)
 
@@ -185,11 +172,12 @@ v1.02
 Improve Power management of the DS18B20 and MPU6050. They are only switched on for about a second to take proper readings.
   
 # BOARDS.
-Get a board that will fit in the PET Tube. Boards must also be low on power consumption during operation and deep sleep. The TTGO Koala looks like the perfect contestant at this stage since iets battery connection is next to the USB port and the charger is braked out to the PINS. Other options may be the DF Robot Fire beetle.
-  
-The Wemos Lolin32 was tested on a breadboard. The GPIO could not power the MPU6050 and DS18B20 and you will have to power them via the 3.3 volt pin. You may use a transistor to switch them on and of to save power. You will also have to remove the battery conector to fit into your PET tube. Some soldering will be needed to make the battery unit working again.
-  
+Get a board that will fit in the PET Tube. Boards must also be low on power consumption during operation and deep sleep. The TTGO Koala looks like the perfect contestant at this stage since its battery connection is next to the USB port and the charger is braked out to the PINS. Other options may be the DF Robot Fire beetle.
+
+The Wemos Lolin32 was tested on a breadboard. The GPIO could not power the MPU6050 and DS18B20 and you will have to power them via the 3.3 volt pin. You may use a transistor to switch them on and off to save power. You will also have to remove the battery connector to fit into your PET tube. Some soldering will be needed to make the battery unit working again.
+
 The Sparkfun ESP32 Thing was tested. None of my two boards WiFi worked correctly. You may have better luck with them
+
 
 # DISCLAIMER
 Do not load this firmware if you do not know what you are doing. This firmware over write what is on the iSpindel. It formats a File System (Called SPIFFS) on your EEPROM. If want to revert back to the iSpindel software, you need format your SPIFFS. by loading https://github.com/JJSlabbert/iTilt/blob/main/format_esp_fact_defaults.ino.ino.d1_mini.bin or running https://github.com/JJSlabbert/iTilt/blob/main/format_esp_fact_defaults.ino 
