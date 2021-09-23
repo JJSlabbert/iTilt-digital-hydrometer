@@ -14,7 +14,19 @@ The standard original iSpindel firmware code was developed in PlatformIO and pub
 
 Diffirences between this firmware and the standard original
 
-<table border="1"><tr><td>iTilt</td><td>iSpindel</td></tr><table>
+<table border="1"><tr><td>iTilt</td><td>iSpindel</td></tr>
+  <tr><td>1 Publish to Cayenne.</td><td>1 Publish to ubidots and other services.	</td></tr>
+  <tr><td>2 Developed in Arduino IDE.</td><td>2 Developed in PlatformIO.</td></tr>
+  <tr><td>3 Simple for me.</td><td>3 Complicated for me.</td></tr>
+  <tr><td>4 Some Functionality without the cloud.(In development, No Logging functionality</td><td>4 Need a cloud or an external Server like Raspberry PI.</td></tr>
+  <tr><td>5 WiFimanager configuration portal can be loaded while brewing.</td><td>5 WiFimanager configuration portal can’t be loaded while brewing.</td></tr>
+  <tr><td></td>6 Polynomial calibration can be done in the WiFiManager Configuration portal with an easy to use wizard. If you use the theoretical gravities suggested in the wizard, you do not even need an extra hydrometer to calibrate.<td>6 Calibration done in Excel.</td></tr>
+  <tr><td>7 Alcohol By Volume is calculated and published to Cayenne, together with Tilt, Current Gravity,Temperature, Original Gravity, the Coefficients of the Polynomial, battery voltage and WiFi Signal Strength.</td><td>7 Data published is Tilt, Gravity, Temperature, Battery Voltage and WiFi Signal Strength.</td></tr>
+  <tr><td>8 Can run on an ESP32 (Was tested on Wemos lolin 32 and TTGO KOALA) and ESP8266 (Wiring must be according to iSpindel standards).</td><td>8 Only run on ESP8266.</td></tr>
+  <tr><td>9 It should consume less power.This need testing. MPU6050 and DS18B20 is powered by GPIO and switch of during deep sleep.</td><td>9 May consume more power.</td></tr>
+  <tr><td>10 One Micro USB port for charging and programming.</td><td>10 One Micro USB port for programming and one USB C port for charging.</td></tr>
+  <tr><td>11 Less complicated cuircut. The Wemos Lolin and TTGO Koala has a build in battery chargers/power supplies.</td><td>11 ESP8266 D1 Mini does not have a battery charger/power supply. Extra battery unit required</td></tr> 
+<table>
 
 # iTilt	VS iSpindel                              
 1 Publish to Cayenne.
