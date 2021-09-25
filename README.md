@@ -37,7 +37,8 @@ You need to be skilled in using the Arduino IDE or Loading bin file firmware on 
   
  On the ESP32 TTGO KOALA GPIO 16 and 17 was both able to power both the MPU6050 and DS18B20 simultaneously.
 
-![fritzing](https://user-images.githubusercontent.com/38969599/134550321-57f0f657-c37c-428a-87b3-d3e5ef49a665.jpg)
+![fritzing](https://user-images.githubusercontent.com/38969599/134767227-71fb867e-a20a-452b-9e15-7dcf1a5275a0.jpg)
+
   
  
 To Do: Eagle File PCB
