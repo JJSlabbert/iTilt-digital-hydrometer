@@ -36,6 +36,8 @@ You need to be skilled in using the Arduino IDE or Loading bin file firmware on 
  Note, My 2 ESP32 Wemos Lolins could not power the MPU6050 and DS18B20 via GPIO when on battery. You need to wire them with the 3.3 volt pin. You may switch them on and off with a transistor.
   
  On the ESP32 TTGO KOALA GPIO 16 and 17 was both able to power both the MPU6050 and DS18B20 simultaneously.
+  
+ If your MPU6050 diode does not dim out during deep sleep, you can add a diode between both your sensors and ground. The | mark on the diode must go to GND.
 
 ![fritzing](https://user-images.githubusercontent.com/38969599/134767227-71fb867e-a20a-452b-9e15-7dcf1a5275a0.jpg)
 
