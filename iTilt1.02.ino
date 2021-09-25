@@ -52,7 +52,7 @@ char constantterm[16] = "0.8923835598800";
 char batconvfact[8] = "193.00"; //converting reading to battery voltage 196.25
 #endif
 #ifdef ESP32
-char batconvfact[8]="825.18";
+char batconvfact[8]="872.48";
 #endif
 char pubint[6] = "0"; // publication interval in seconds
 char originalgravity[6] = "1.05";
@@ -104,8 +104,8 @@ int16_t ax, ay, az;
 
 //ESP32 POWER PIN
 #ifdef ESP32
-#define power_pin 17
-#define power_pin2 16
+#define power_pin 32
+#define power_pin2 32
 #endif
 
 //GLOBAL HTML STRINGS
@@ -173,6 +173,73 @@ float calcOffset()
   }
   float offset=89.0-areading;
   return offset;
+}
+float calcBatCap(float volts)  //linear interpolation used, data from http://www.benzoenergy.com/blog/post/what-is-the-relationship-between-voltage-and-capacity-of-18650-li-ion-battery.html
+{
+  float capacity;
+  if (volts<=3)
+  {
+    capacity=0;
+    return capacity;
+  }
+  if (volts>3 and volts<=3.45)
+  {
+    capacity=0+((volts-3)/(3.45-3))*5;
+    return capacity;    
+  }
+  if (volts>3.45 and volts<=3.68)
+  {
+    capacity=5+((volts-3.45)/(3.68-3.45))*5;
+    return capacity;    
+  }
+  if (volts>3.68 and volts<=3.74)
+  {
+   capacity=10+((volts-3.68)/(3.74-3.68))*10;
+   return capacity;   
+  }
+  if (volts>3.74 and volts<=3.77)
+  {
+    capacity=20+((volts-3.74)/(3.77-3.74))*10;
+    return capacity;    
+  }
+  if (volts>3.77 and volts<=3.79)
+  {
+    capacity=30+((volts-3.77)/(3.79-3.77))*10;
+    return capacity;    
+  }
+    
+  if (volts>3.79 and volts<=3.82)
+  {
+    capacity=40+((volts-3.79)/(3.82-3.79))*10;
+    return capacity;    
+  }
+  if (volts>3.82 and volts<=3.87)
+  {
+    capacity=50+((volts-3.82)/(3.87-3.82))*10;
+    return capacity;    
+  }                
+  if (volts>3.87 and volts<=3.92)
+  {
+    capacity=60+((volts-3.87)/(3.92-3.87))*10;
+    return capacity;    
+  }       
+  if (volts>3.92 and volts<=3.98)
+  {
+    capacity=70+((volts-3.92)/(3.98-3.92))*10;
+    return capacity;    
+  }       
+  if (volts>3.98 and volts<=4.06)
+  {
+    capacity=80+((volts-3.98)/(4.06-3.98))*10;
+    return capacity;    
+  }      
+  if (volts>4.06)
+  {
+    capacity=90+((volts-4.06)/(4.2-4.06))*10;
+    if (capacity>100)
+    {capacity=100;}
+    return capacity;    
+  }           
 }
 
 float calcBatVolt()
@@ -475,12 +542,14 @@ void handlePolynomialCalibrationStart()
 }
 
 void handleReadings() {
+  float batvolt=calcBatVolt();
   Serial.println("[HTTP] handle Readings");
   String htmlText = "<HTML><HEAD><meta http-equiv='refresh' content='1'><TITLE>iTilt Sensor Readings</TITLE></HEAD>";
   htmlText+= htmlStyleText;
   htmlText+= "<BODY><h1>iTilt Sensor Readings</h1>";
   htmlText+= "<p>Sensor Readings will update every 2 seconds.</p>";
-  htmlText+= "<p>Battery Voltage: " + String(analogRead(A3) / atof(batconvfact)) + "</p>";
+  htmlText+= "<p>Battery Voltage: " + String(batvolt,2) + "</p>";
+  htmlText+= "<p>Battery Remaining Capacity: " + String(calcBatCap(batvolt),0) + " percent</p>";  
   htmlText+= "<p>Tilt: " + String(calcTilt()) + " Degrees. This value should be about 89 degrees if the iTilt is on a horizontal surface.</p>";
   htmlText+= "<p>Gravity: " + String(calcGrav(), 5) + " SG</p>";
   htmlText+= "<p>Temperature: " + String(calcTemp()) + " Degrees Celcius</p>";
@@ -549,7 +618,7 @@ void setup()
       }
     }
   } else {
-    Serial.println("failed to mount FS");
+    Serial.println("failed to mount FS");  //This hapen with new ESP32 KOALA WROVER-Format Spifs?
   }
   //end read
 
@@ -561,7 +630,7 @@ void setup()
     digitalWrite(power_pin,HIGH);
     pinMode(power_pin2,OUTPUT);
     digitalWrite(power_pin2,HIGH);
-    delay(100);
+    delay(200);
   #endif
   sensors.begin();
   float tilt=calcTilt();
@@ -579,8 +648,10 @@ void setup()
   float foriginalgravity;
   float fpubint;
   float batvolt=calcBatVolt();
+  float batcap=calcBatCap(batvolt);
   String polynome;
   String topic;
+  String topic1;
   String topic2;
   String topic3;
   String topic4;
@@ -726,7 +797,8 @@ void setup()
     grav=calcGrav();
     abv=calcABV();
     temp=calcTemp();
-    batvolt=calcBatVolt(); 
+    batvolt=calcBatVolt();
+    batcap=calcBatCap(batvolt); 
     #ifdef ESP32
       pinMode(power_pin,OUTPUT);
       digitalWrite(power_pin,LOW);
@@ -735,6 +807,7 @@ void setup()
     #endif  
     polynome=String(fcoefficientx3,8)+", "+String(fcoefficientx2,6)   +", "+String(fcoefficientx1,5)+", "+String(fconstantterm,5);
     topic="v1/"+String(mqtt_username)+"/things/"+String(mqtt_clientid)+"/data/";
+    topic1=topic+"1";
     topic2=topic+"2";
     topic3=topic+"3";
     topic4=topic+"4";
@@ -760,6 +833,7 @@ void setup()
     fconstantterm=atof(constantterm);      
     polynome=String(fcoefficientx3,8)+", "+String(fcoefficientx2,6)   +", "+String(fcoefficientx1,5)+", "+String(fconstantterm,5);
     topic="v1/"+String(mqtt_username)+"/things/"+String(mqtt_clientid)+"/data/";
+    topic1=topic+"1";
     topic2=topic+"2";
     topic3=topic+"3";
     topic4=topic+"4";
@@ -788,7 +862,9 @@ void setup()
     }
     delay(200);
   }
-  float signalstrength=WiFi.RSSI()+90;
+  float signalstrength=(WiFi.RSSI()+90)*1.80;
+  if (signalstrength>100)
+  {signalstrength=100;}
   Serial.println("The iTilt connected to your WiFi access point");
   Serial.println("local ip");
   Serial.println(WiFi.localIP());
@@ -803,6 +879,8 @@ void setup()
   }
 
   Serial.println("You're connected to the MQTT broker of Cayenne!");
+  Serial.println("Topic 1: "+topic1);
+  Serial.println("Battery Capacity: "+String(batcap,0));
   Serial.println("Topic 2: "+topic2);
   Serial.println("Polynome: "+polynome);
   Serial.println("Topic 3: "+topic3);
@@ -822,12 +900,15 @@ void setup()
   Serial.println("Topic 10: "+topic10);
   Serial.println("ABV: "+String(abv,4)); 
   Serial.println("Topic 11: "+topic11);
-  Serial.println("Signal Strength: "+String(signalstrength,4));       
+  Serial.println("Signal Strength: "+String(signalstrength,4)); 
+  mqttClient.beginMessage(topic1);
+  mqttClient.print(batcap); 
+  mqttClient.endMessage();        
   mqttClient.beginMessage(topic2);
   mqttClient.print(polynome); 
   mqttClient.endMessage();
   mqttClient.beginMessage(topic3);
-  mqttClient.print("Firmware Version: 1.02"); 
+  mqttClient.print(1.02); 
   mqttClient.endMessage();
   mqttClient.beginMessage(topic4);
   mqttClient.print("temp,c="+String(temp,4)); 
