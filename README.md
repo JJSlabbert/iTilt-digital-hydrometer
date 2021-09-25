@@ -189,6 +189,9 @@ v1.02
 
 2 Provide estimate of remaining battery capacity based on voltage: Source:http://www.benzoenergy.com/blog/post/what-is-the-relationship-between-voltage-and-capacity-of-18650-li-ion-battery.html
   
+v1.0.3
+
+New web page for Custom Pin configurations. If you can not use the default pin configurations for Power, SDA, SCL and ONE WIRE.  
 
   
 # BOARDS.
