@@ -185,7 +185,11 @@ v1.01
   
 v1.02
 
-Improve Power management of the DS18B20 and MPU6050. They are only switched on for about a second to take proper readings.
+1 Improve Power management of the DS18B20 and MPU6050. They are only switched on for about a second to take proper readings.
+
+2 Provide estimate of remaining battery capacity based on voltage: Source:http://www.benzoenergy.com/blog/post/what-is-the-relationship-between-voltage-and-capacity-of-18650-li-ion-battery.html
+  
+
   
 # BOARDS.
 Get a board that will fit in the PET Tube. Boards must also be low on power consumption during operation and deep sleep. The TTGO Koala looks like the perfect contestant at this stage since its battery connection is next to the USB port and the charger is braked out to the PINS. Other options may be the DF Robot Fire beetle.
