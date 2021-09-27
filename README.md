@@ -199,11 +199,21 @@ Cosmetic Improvements for HTML
 
   
 # BOARDS.
-Get a board that will fit in the PET Tube. Boards must also be low on power consumption during operation and deep sleep. The TTGO Koala looks like the perfect contestant at this stage since its battery connection is next to the USB port and the charger is braked out to the PINS. Other options may be the DF Robot Fire beetle.
+Considerations:
+  
+1 Get a board that will fit in the PET Tube. 
+  
+2 Boards must also be low on power consumption during operation and deep sleep. 
+  
+3 Board must have a strong WiFi signal.
+  
+The TTGO Koala looks like the perfect contestant at this stage since its battery connection is next to the USB port and the charger is braked out to the PINS. It seems like it runs low on battery during operation and deep sleep. I tested it in a coffee urn (1mm thick stainless steel) and WiFi signal was low, but still worked.
 
 The Wemos Lolin32 was tested on a breadboard. The GPIO could not power the MPU6050 and DS18B20 and you will have to power them via the 3.3 volt pin. You may use a transistor to switch them on and off to save power. You will also have to remove the battery connector to fit into your PET tube. Some soldering will be needed to make the battery unit working again.
 
-The Sparkfun ESP32 Thing was tested. None of my two boards WiFi worked correctly. You may have better luck with them
+The Sparkfun ESP32 Thing was tested. None of my two boards WiFi worked correctly. You may have better luck with them.
+  
+Other options may be the DF Robot Fire beetle.
 
 
 # DISCLAIMER
