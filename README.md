@@ -195,7 +195,9 @@ New web page for Custom Pin configurations. If you can not use the default pin c
   
 v1.04
   
-Cosmetic Improvements for HTML
+1 Cosmetic Improvements for HTML
+  
+2 Faster sensor readings using sample size arguments and reducing duplicate function calls to calcTilt().
 
   
 # BOARDS.
