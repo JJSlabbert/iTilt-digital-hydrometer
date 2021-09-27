@@ -191,7 +191,11 @@ v1.02
   
 v1.0.3
 
-New web page for Custom Pin configurations. If you can not use the default pin configurations for Power, SDA, SCL and ONE WIRE.  
+New web page for Custom Pin configurations. If you can not use the default pin configurations for Power, SDA, SCL and ONE WIRE. 
+  
+v1.04
+  
+Cosmetic Improvements for HTML
 
   
 # BOARDS.
