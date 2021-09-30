@@ -24,7 +24,7 @@ The standard original iSpindel firmware code was developed in PlatformIO and pub
   <tr><td>7 Alcohol By Volume is calculated and published to Cayenne, together with Tilt, Current Gravity,Temperature, Original Gravity, the Coefficients of the Polynomial, battery voltage, battery level % and WiFi Signal Strength.</td><td>7 Data published is Tilt, Gravity, Temperature, Battery Voltage and WiFi Signal Strength.</td></tr>
   <tr><td>8 Can run on an ESP32 (Was tested on Wemos lolin 32 and TTGO KOALA) and ESP8266 (Wiring must be according to iSpindel standards).</td><td>8 Only run on ESP8266.</td></tr>
   <tr><td>9 It should consume less power.This need testing. MPU6050 and DS18B20 is powered by GPIO and switch of during deep sleep.</td><td>9 May consume more power.</td></tr>
-  <tr><td>10 One Micro USB port for charging and programming.</td><td>10 One Micro USB port for programming and one USB C port for charging.</td></tr>
+  <tr><td>10 One USB C port for charging and programming.</td><td>10 One Micro USB port for programming and one USB C port for charging.</td></tr>
   <tr><td>11 Less complicated cuircut. The Wemos Lolin and TTGO Koala has a build in battery chargers/power supplies.</td><td>11 ESP8266 D1 Mini does not have a battery charger/power supply. Extra battery unit required</td></tr> 
 <table>
 
