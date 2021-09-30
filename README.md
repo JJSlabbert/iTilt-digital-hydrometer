@@ -59,7 +59,7 @@ To Do: Eagle File PCB
 -MPU6050 (Install from Arduino IDE)
 
 # STEPS
--Load the Firmware from source or binary on your iSpindel. If you had the iSpindel firmware (or other firmware using EEPROM) installed, you may need format your SPIFFS. Read the disclaimer.
+-Load the Firmware from source or binary on your iSpindel. If you had the iSpindel firmware (or other firmware using SPIFFS) installed, you may need format your SPIFFS. Read the disclaimer.
 
 -The LED_BUILTIN (Blue LED in my case) should flash
 
