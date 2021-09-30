@@ -4,7 +4,7 @@
 
 
 # INTRODUCTION
-An alternative firmware (ESP8266 and ESP32 compatible) for the iSpindel WiFi hydrometer developed with the Arduino IDE and using Cayenne cloud service. This firmware was tested on iSpindels and my iTilt version using an ESP32 Wemos Lolin.
+An alternative firmware (ESP8266 and ESP32 compatible) for the iSpindel WiFi hydrometer developed with the Arduino IDE and using Cayenne cloud service. This firmware was tested on iSpindels and my iTilt version using an ESP32 TTGO KOALA.
 The iTilt is an open source device used to measure the gravity (Density) of beer or cider. It can also be used to calculate the ABV (Alcohol by Volume) of you home brew beer.
 The iTilt consist of an ESP8266 microcontroller (or ESP32), MPU6050 Gyroscope, battery and battery charger inside a PET Test tube.  The iTilt is inserted into your brew before you add yeast. Initially your brew will have a high gravity (density) because of all the sugar in it. The iTilt may tilt at about 60° (from a vertical line) in your brew. When your brew starts to ferment and sugar is turned into alcohol, the tilt angle will reduce and the iTilt will become more vertical. The gyroscope will continuously monitor this tilt, transform it into gravity (with a statistical model) and ABV and publish the results to the cloud.
 
