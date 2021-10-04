@@ -40,7 +40,6 @@ You need to be skilled in using the Arduino IDE or Loading bin file firmware on 
  If your MPU6050 diode does not dim out during deep sleep, you can add a diode between both your sensors and ground. The | mark on the diode must go to GND.
 
 ![fritzing](https://user-images.githubusercontent.com/38969599/134767227-71fb867e-a20a-452b-9e15-7dcf1a5275a0.jpg)
-
   
  
 To Do: Eagle File PCB
