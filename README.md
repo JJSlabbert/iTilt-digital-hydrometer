@@ -198,6 +198,8 @@ v1.04
 1 Cosmetic Improvements for HTML
   
 2 Faster sensor readings using sample size arguments and reducing duplicate function calls to calcTilt().
+  
+3 WiFiManager Configuration Portal: Password is now the mac adsress.
 
   
 # BOARDS.
