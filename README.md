@@ -201,6 +201,16 @@ v1.04
 2 Faster sensor readings using sample size arguments and reducing duplicate function calls to calcTilt().
   
 3 WiFiManager Configuration Portal: Password is now the mac adsress.
+  
+v1.05
+Certain GPIOS does not go LOW during deep sleep. Use the following to resolve:
+  #include "esp_sleep.h"
+  
+  gpio_hold_en (GPIO_NUM_33);
+  
+  gpio_deep_sleep_hold_en();
+  
+  gpio_hold_dis (GPIO_NUM_33);
 
   
 # BOARDS.
