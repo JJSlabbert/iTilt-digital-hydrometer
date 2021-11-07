@@ -222,7 +222,9 @@ Considerations:
   
 3 Board must have a strong WiFi signal.
   
-The TTGO Koala looks like the perfect contestant at this stage since its battery connection is next to the USB port and the charger is braked out to the PINS. It seems like it runs low on battery during operation and deep sleep. I tested it in a coffee urn (1mm thick stainless steel) and WiFi signal was low, but still worked.
+The ESP32-E DF Robot looks like the best current board.
+  
+The TTGO Koala looks like a contestant at this stage since its battery connection is next to the USB port and the charger is braked out to the PINS. It seems like it runs low on battery during operation and deep sleep. I tested it in a coffee urn (1mm thick stainless steel) and WiFi signal was low, but still worked. Issues witht the TTGO Koala is that it needs a reset after power recycle when on battery.
 
 The Wemos Lolin32 was tested on a breadboard. The GPIO could not power the MPU6050 and DS18B20 and you will have to power them via the 3.3 volt pin. You may use a transistor to switch them on and off to save power. You will also have to remove the battery connector to fit into your PET tube. Some soldering will be needed to make the battery unit working again.
 
