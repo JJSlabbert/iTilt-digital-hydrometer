@@ -99,7 +99,9 @@ To Do: Eagle File PCB
 -Your iTilt should start to publish to Cayenne.
 
 # ENTERING THE WIFIMANAGER CONFIGURATION PORTAL AGAIN
--Short the Reset pin while holding the iTilt vertical
+-Short the Reset pin while holding the iTilt vertical or
+  
+-Hold the device in a vertical or horizontal position.
 
 -While Brewing: Draw the iSpindel vertical against the plastic fermenter with a strong magnet. Keep it like that. The iSpindel will detect it is vertical when it wakes out of deep sleep. This may take time, dependent on your selected publication interval.
 
