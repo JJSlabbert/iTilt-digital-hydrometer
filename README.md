@@ -64,9 +64,7 @@ To Do: Eagle File PCB
 
 -The LED_BUILTIN (Blue LED in my case) should flash
 
--Short the two reset pins (press reset) and tilt the iTilt vertical (Cup, USB port must be on top)
-
--Place your iTilt horizontal on a levelled surface
+-Place your iTilt horizontal or vertical on a levelled surface. Reset it. You will see a few flashes of the Builtin LED. The green LED of the Gyro should be on.
 
 -You will now see that the iTilt created an Access point.
 
