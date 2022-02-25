@@ -44,6 +44,9 @@ You need to be skilled in using the Arduino IDE or Loading bin file firmware on 
 ![iTilt_PCB](https://user-images.githubusercontent.com/38969599/135935232-8fad868c-2309-4901-bbac-a22bb6e3bb51.png)
   
 ![screencapture](https://user-images.githubusercontent.com/38969599/154816629-399cf15f-3523-4196-ace1-b1f81d15f869.jpg)
+  
+  <B>RECOMENDED BATTERY:</B>
+ INR 18650 Samsung 30Q (15 amp continues current draw)
 
  
 To Do: Eagle File PCB
