@@ -225,6 +225,9 @@ Certain GPIOS does not go LOW during deep sleep. Use the following to resolve:
  v1.06
  Read both DS18B20 and internal Temp of MPU6050. The MPU6050 Temp sensor has a resolution of 1 deg Celsius. It Configuration mode the MPU 6050 will head up and readings can be +-2 degrees to high. When the iTilt is publishing to the cloud it should not heat up since the iTilt is in deep sleep most of the time.
   On Saturday 5 March 2022 I managed to get the first iTilt hardware to work properly. It used an ESP32-E Firebeetle and Firmware 1.06.
+  
+  v1.07
+  New Function calcRoll. Display the roll in Sensor Readings Page
 
   
 # BOARDS.
