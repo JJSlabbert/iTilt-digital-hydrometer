@@ -227,7 +227,8 @@ Certain GPIOS does not go LOW during deep sleep. Use the following to resolve:
   On Saturday 5 March 2022 I managed to get the first iTilt hardware to work properly. It used an ESP32-E Firebeetle and Firmware 1.06.
   
   v1.07
-  New Function calcRoll. Display the roll in Sensor Readings Page
+  New Function calcRoll. Display the roll in Sensor Readings Page.
+  Longer delay (based on wifi signal strength) to make sure data is publish to cayenne.
 
   
 # BOARDS.
