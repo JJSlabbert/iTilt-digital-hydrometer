@@ -156,7 +156,6 @@ Channel 0: iTilt ID Number
   
 Channel 1: Battery Capacity percentage
 
-Channel 2: The Polynome (Coefficient T^3, T^2,.....Constant Term). Can not display on the Dashboard, See it in the Data Stream.
 Channel 2: Gyro Internal Temp.
   
 Channel 3: The Firmware Version. Can not display on the Dashboard, See it in the Data Stream.
