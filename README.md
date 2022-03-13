@@ -228,6 +228,10 @@ Certain GPIOS does not go LOW during deep sleep. Use the following to resolve:
   v1.07
   New Function calcRoll. Display the roll in Sensor Readings Page.
   Longer delay (based on wifi signal strength) to make sure data is publish to cayenne.
+  
+  v1.08
+  Move cayenne things to function pubToCayenne().
+  Hibernate (Switch off) if roll <20 or roll>160.
 
   
 # BOARDS.
