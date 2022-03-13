@@ -113,20 +113,25 @@ To Do: Eagle File PCB
 
 
 # LED INDICATORS
-Gyro LED is Blue or Red
-ESP32 Firebeetle LED is green
+Gyro LED is Blue or Red.
   
-Gyro LED on and ESP LED ON, Awaike from deep sleep. All sensors will readed
-Gyro LED of and ESP LED still on, Connecting to WiFi and send data to cloud
-Gyro and ESP LED of, ESP is in deep sleep
-
+ESP32 Firebeetle LED is green.
+  
+Gyro LED on and ESP LED ON, Awaike from deep sleep. All sensors will be readed.
+  
+Gyro LED of and ESP LED still on, Connecting to WiFi and send data to cloud.
+  
+Gyro and ESP LED of, ESP is in deep sleep.
 
 10 Short flashes of ESP= WiFiManager Configuration portal will start in three minutes.
  
 #iTilt ORIENTATION
 1) VERTICAL, BATTERY DOWN
+  
   On reset, Configuration portal will run
+  
 2) VERTICAL, BATTERY SIDEWAYS
+  
   On reset, the iTilt will enter hibernation mode. This is the ideal mode to store device or charge battery.
   
 # NOTES ON MODEL CALIBRATION (CALCULATION OF THE POLYNOMIAL)
