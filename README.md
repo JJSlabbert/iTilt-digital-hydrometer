@@ -42,9 +42,7 @@ You need to be skilled in using the Arduino IDE or Loading bin file firmware on 
 
 ![fritzing](https://user-images.githubusercontent.com/38969599/134767227-71fb867e-a20a-452b-9e15-7dcf1a5275a0.jpg)
   
-![iTilt_PCB](https://user-images.githubusercontent.com/38969599/135935232-8fad868c-2309-4901-bbac-a22bb6e3bb51.png)
-  
-![screencapture](https://user-images.githubusercontent.com/38969599/154816629-399cf15f-3523-4196-ace1-b1f81d15f869.jpg)
+
   
   <B>RECOMENDED BATTERY:</B>
  INR 18650 Samsung 30Q (15 amp continues current draw)
