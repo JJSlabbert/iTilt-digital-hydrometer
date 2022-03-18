@@ -288,7 +288,7 @@ Commercial Licenses will be available at a reasonable price.
 
 Copy right holder: Jacobus Johannes Slabbert
   
-#TROUBLE SHOOTING
+# TROUBLE SHOOTING
 1 MPU6050 LED BLINKING
   Check the solder joints. The battery holder may push against solder joints and effect the contact.
   
