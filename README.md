@@ -291,7 +291,7 @@ Copy right holder: Jacobus Johannes Slabbert
   
   Check the solder joints. The battery holder may push against solder joints and effect the contact.
   
-2 ESP32 HEATING WHEN IN DEEP SLEEP AND BATTERY LOOSING POWER
+2 ESP32 HEATING WHEN IN DEEP SLEEP, BATTERY LOOSING POWER, BATTERY CHARGE NEVER COMPLETES.
   
   Inspect solder joints for bridges. Inspect the resistors (voltage devider) between the pcb and ESP32.
   
