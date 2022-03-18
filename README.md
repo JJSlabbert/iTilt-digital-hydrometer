@@ -34,13 +34,18 @@ You need to be skilled in using the Arduino IDE or Loading bin file firmware on 
 
 # BUILD YOUR HARDWARE
   
- Note, My 2 ESP32 Wemos Lolins could not power the MPU6050 and DS18B20 via GPIO when on battery. You need to wire them with the 3.3 volt pin. You may switch them on and off with a transistor.
+First, test all your hardware on a breadboard.
   
- On the ESP32 TTGO KOALA GPIO 16 and 17 was both able to power both the MPU6050 and DS18B20 simultaneously. The ESP32 KOALA charger only charge the battery to 4.07 (80%) volt and not to 4.2 volts
-  
- If your MPU6050 diode does not dim out during deep sleep, you can add a diode between both your sensors and ground. The | mark on the diode must go to GND.
+If your MPU6050 diode does not dim out during deep sleep, you can add a diode between both your sensors and ground. The | mark on the diode must go to GND.
 
-![fritzing](https://user-images.githubusercontent.com/38969599/134767227-71fb867e-a20a-452b-9e15-7dcf1a5275a0.jpg)
+![fritzing](https://user-images.githubusercontent.com/38969599/134767227-71fb867e-a20a-452b-9e15-7dcf1a5275a0.jpg).
+  
+My PCB was milled on a CNC. The design was done in Autocad Eagle. The GCODE was generated with PCB gecode setup (Eagle Addon). I also tin plated the pcb
+ 
+ 
+![tinplated](https://user-images.githubusercontent.com/38969599/159095224-27a51cba-ba5b-4123-bd0e-2ce49d94e2ba.jpg)
+  
+1) Create a PCB
   
 
   
@@ -259,7 +264,7 @@ Considerations:
   
 The ESP32-E DF Robot looks like the best current board.
   
-The TTGO Koala looks like a contestant at this stage since its battery connection is next to the USB port and the charger is braked out to the PINS. It seems like it runs low on battery during operation and deep sleep. I tested it in a coffee urn (1mm thick stainless steel) and WiFi signal was low, but still worked. Issues witht the TTGO Koala is that it needs a reset after power recycle when on battery.
+The TTGO Koala looks like a contestant at this stage since its battery connection is next to the USB port and the charger is braked out to the PINS. It seems like it runs low on battery during operation and deep sleep. I tested it in a coffee urn (1mm thick stainless steel) and WiFi signal was low, but still worked. The battery charger only charge up to 4.08 volt (80%).
 
 The Wemos Lolin32 was tested on a breadboard. The GPIO could not power the MPU6050 and DS18B20 and you will have to power them via the 3.3 volt pin. You may use a transistor to switch them on and off to save power. You will also have to remove the battery connector to fit into your PET tube. Some soldering will be needed to make the battery unit working again.
 
