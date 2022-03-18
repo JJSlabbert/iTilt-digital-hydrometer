@@ -287,11 +287,14 @@ Commercial Licenses will be available at a reasonable price.
 Copy right holder: Jacobus Johannes Slabbert
   
 # TROUBLE SHOOTING
-1 MPU6050 LED BLINKING
+1 MPU6050 LED BLINKING ON AND OFF
+  
   Check the solder joints. The battery holder may push against solder joints and effect the contact.
   
 2 ESP32 HEATING WHEN IN DEEP SLEEP AND BATTERY LOOSING POWER
-  Inspect solder joints for bridges.
+  
+  Inspect solder joints for bridges. Inspect the resistors (voltage devider) between the pcb and ESP32.
+  
   
 # PATENT RIGHTS
 The tilt (comercial hydro meter) has a Patent in the USA. I am not awaire of any similiar patent in any other country. The USA Patent may apply if you are staying in the USA. Fortunate in may country, we have proper patent right laws. You will not be able to register a micro controler, battery management system and gyro as a patent. All boat, airplaine companies and courts will laught at such a patent.
