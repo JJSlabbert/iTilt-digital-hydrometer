@@ -1,6 +1,6 @@
 ![iTilt_complete1 08](https://user-images.githubusercontent.com/38969599/159094365-500bdb83-71e1-4cc6-af6d-25c935d3f336.jpg)
 ![iTilt_front1 08](https://user-images.githubusercontent.com/38969599/159094395-5ed57399-b363-4618-adcb-b0f4400f312e.jpg)
-![iTilt_back1 08](https://user-images.githubusercontent.com/38969599/159094349-8f65cbcd-39d4-4155-8594-3472e2de9590.jpg)
+
 
 
 # INTRODUCTION
