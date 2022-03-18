@@ -45,7 +45,11 @@ My PCB was milled on a CNC. The design was done in Autocad Eagle. The GCODE was 
  
 ![tinplated](https://user-images.githubusercontent.com/38969599/159095224-27a51cba-ba5b-4123-bd0e-2ce49d94e2ba.jpg)
   
-1) Create a PCB
+
+ ![Build_Instructions](https://user-images.githubusercontent.com/38969599/159097547-585856f2-f087-415d-bd53-e777fad79960.jpg)
+ 
+1) Create a PCB using CNC or etching
+2)   
   
 
   
