@@ -270,6 +270,11 @@ Certain GPIOS does not go LOW during deep sleep. Use the following to resolve:
   v1.08
   Move cayenne things to function pubToCayenne().
   Hibernate (Switch off) if roll <20 or roll>160.
+  
+# FUTURE DEVELOPMENTS
+  1) Add aditional cloud services (Dash Boards), publish to beer apps.
+  
+  2) Provide options to send data via BLE
 
   
 # BOARDS.
