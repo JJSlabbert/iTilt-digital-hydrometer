@@ -36,7 +36,7 @@ You need to be skilled in using the Arduino IDE or Loading bin file firmware on 
   
 First, test all your hardware on a breadboard.
   
-If your MPU6050 diode does not dim out during deep sleep, you can add a diode between both your sensors and ground. The | mark on the diode must go to GND.
+If your MPU6050 diode does not dim out during deep sleep, you can add a diode between both your sensors and ground. The | mark on the diode must go to GND. (Will not be applicable to ESP32 Firebeetle.)
 
 ![fritzing](https://user-images.githubusercontent.com/38969599/134767227-71fb867e-a20a-452b-9e15-7dcf1a5275a0.jpg).
   
@@ -48,8 +48,23 @@ My PCB was milled on a CNC. The design was done in Autocad Eagle. The GCODE was 
 
  ![Build_Instructions](https://user-images.githubusercontent.com/38969599/159097547-585856f2-f087-415d-bd53-e777fad79960.jpg)
  
-1) Create a PCB using CNC or etching
-2)   
+1) Create a PCB using CNC or etching.
+  
+2) Solder 0 Ohms resistors between (1 and 2) and (7 and 8).
+  
+3) Solder the voltage divider. 4.7KOhms between 3 and 5, 10 KOhms between 4 and 6.
+  
+4) Solder the push button (Reset).
+  
+5) Solder the DS18B20. Make sure about polarity and use a 4.7KOhms resister between data and 3.3v.
+  
+6) Solder the MPU6050.
+  
+7) Solder the ESP32 Firebeetle.
+  
+8) Reform (narrow) your battery holder with about 5mm to ensure it does not push agains solder joins.
+  
+9) Attach the battery holder. When you insert the battery, check your polarity.
   
 
   
