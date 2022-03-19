@@ -143,7 +143,7 @@ Gyro LED on and ESP LED ON, Awaike from deep sleep. All sensors will be readed.
   
 Gyro LED of and ESP LED still on, Connecting to WiFi and send data to cloud.
   
-Gyro and ESP LED of, ESP is in deep sleep.
+Gyro and ESP LED of, ESP8266 is in deep sleep / ESP32 in hibernation.
 
 10 Short flashes of ESP LED, WiFiManager Configuration portal will start in three minutes.
  
