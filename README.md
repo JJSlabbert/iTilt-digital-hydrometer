@@ -36,7 +36,7 @@ You need to be skilled in using the Arduino IDE or Loading bin file firmware on 
   
 First, test all your hardware on a breadboard.
   
-If your MPU6050 diode does not dim out during deep sleep, you can add a diode between both your sensors and ground. The | mark on the diode must go to GND. (Will not be applicable to ESP32 Firebeetle.)
+If your MPU6050 LED does not dim out during deep sleep, you can add a diode between both your sensors and ground. The | mark on the diode must go to GND. (Will not be applicable to ESP32 Firebeetle.)
 
 ![fritzing](https://user-images.githubusercontent.com/38969599/134767227-71fb867e-a20a-452b-9e15-7dcf1a5275a0.jpg).
   
