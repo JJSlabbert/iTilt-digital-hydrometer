@@ -146,7 +146,7 @@ Gyro and ESP LED of, ESP8266 is in deep sleep / ESP32 in hibernation.
 
 10 Short flashes of ESP LED, WiFiManager Configuration portal will start in three minutes.
  
-#iTilt ORIENTATION
+# iTilt ORIENTATION
 1) VERTICAL OR HORIZONTAL WITH BATTERY DOWN
   
   On reset, Configuration portal will run
