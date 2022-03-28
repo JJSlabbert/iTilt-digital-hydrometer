@@ -269,6 +269,7 @@ Certain GPIOS does not go LOW during deep sleep. Use the following to resolve:
   v1.08
   Move cayenne things to function pubToCayenne().
   Hibernate (Switch off) if roll <20 or roll>160.
+  Hibernate if Battery Voltage is less than 3.00 volt. This function is located in setup(), so it will not be called if the voltage get under 3 volt while in Configuration Portal.
   
 # FUTURE DEVELOPMENTS
   1) Add aditional cloud services (Dash Boards), publish to beer apps.
