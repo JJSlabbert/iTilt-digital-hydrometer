@@ -286,7 +286,7 @@ Considerations:
   
 2 Boards must also be low on power consumption during operation and deep sleep. 
   
-3 Board must have a strong WiFi signal.
+3 Board must have a strong WiFi signal. The sparkfun thing failed this criteria. The antena must be located near the lid of the PET tube.
   
 The ESP32-E DF Robot looks like the best current board.
   
