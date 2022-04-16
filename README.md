@@ -271,6 +271,10 @@ Certain GPIOS does not go LOW during deep sleep. Use the following to resolve:
   Hibernate (Switch off) if roll <20 or roll>160.
   Hibernate if Battery Voltage is less than 3.00 volt. This function is located in setup(), so it will not be called if the voltage get under 3 volt while in Configuration Portal.
   
+  v1.09
+  Replace the ArduinomqttClient library with PubSubClient Library. This Library has better reviews and ArduinomqttClient could not publish to Ubidots for some reason.
+  Ubidots and AdafruitIO cloud options added.
+  
 # FUTURE DEVELOPMENTS
   1) Add aditional cloud services (Dash Boards), publish to beer apps.
   
