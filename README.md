@@ -16,7 +16,7 @@ The standard original iSpindel firmware code was developed in PlatformIO and pub
 # Diffirences between this firmware/Hardware and the standard original iSpindel
 
 <table border="1"><tr><td> <b>iTilt</b></td><td> <b>iSpindel</b></td></tr>
-  <tr><td>1 Publish to Cayenne.</td><td>1 Publish to ubidots and other services.	</td></tr>
+  <tr><td>1 Publish to Cayenne, Ubidots and Adafruit IO.</td><td>1 Publish to ubidots and other services.	</td></tr>
   <tr><td>2 Developed in Arduino IDE.</td><td>2 Developed in PlatformIO.</td></tr>
   <tr><td>3 Simple for me.</td><td>3 Complicated for me.</td></tr>
   <tr><td>4 WiFimanager configuration portal can be loaded while brewing.</td><td>4 WiFimanager configuration portal can’t be loaded while brewing.</td></tr>
