@@ -5,7 +5,7 @@
 
 # INTRODUCTION
 
-The iTilt measures gravity of beer during the fermentation process. The iTilt consist of an ESP32 (or ESP8266) microcontroller, MPU6050 Gyroscope, DS18B20 temperature sensor (Optional), battery and battery charger inside a PET Test tube.  The iTilt is inserted into your wort before you add yeast. Initially your brew will have a high gravity (density) because of all the sugar in it. The iTilt may tilt at about 60° (from a vertical line) in your brew. When your brew starts to ferment and sugar is turned into alcohol, the tilt angle will reduce and the iTilt will become more vertical. The gyroscope will continuously monitor this tilt, transform it into gravity (with a statistical model/ polynomial of 3rd degree) and ABV and publish the results to the cloud.
+The iTilt measures gravity of beer during the fermentation process. The iTilt consist of an ESP32 (or ESP8266) microcontroller, MPU6050 Gyroscope, DS18B20 temperature sensor (Optional), battery and battery charger inside a PET preform.  The iTilt is inserted into your wort before you add yeast. Initially your brew will have a high gravity (density) because of all the sugar in it. The iTilt may tilt at about 60° (from a vertical line) in your brew. When your brew starts to ferment and sugar is turned into alcohol, the tilt angle will reduce and the iTilt will become more vertical. The gyroscope will continuously monitor this tilt, transform it into gravity (with a statistical model/ polynomial of 3rd degree) and ABV and publish the results to the cloud.
 
 This firmware is compatible with iSpindel hardware.
 
