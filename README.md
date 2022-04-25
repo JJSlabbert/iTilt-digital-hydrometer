@@ -78,7 +78,8 @@ To Do: Eagle File PCB
 
 -ArduinoJson version 6 (Install from Arduino IDE)
 
--ArduinoMqttClient (Install from Arduino IDE) for iTilt v1.01 and up, CayenneMQTT (Install from Arduino IDE) for v1.00
+-PubSubClient for v1.09 (Install from Arduino IDE)
+  ArduinoMqttClient (Install from Arduino IDE) for iTilt v1.01 to 1.08, CayenneMQTT (Install from Arduino IDE) for v1.00
 
 -OneWire (Install from Arduino IDE)
 
