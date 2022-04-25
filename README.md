@@ -87,6 +87,9 @@ To Do: Eagle File PCB
 
 -MPU6050 (Install from Arduino IDE)
 
+- curveFitting (Install from the Arduino IDE)
+  
+
 # STEPS
 -Load the Firmware from source or binary on your iSpindel. If you had the iSpindel firmware (or other firmware using SPIFFS) installed, you may need format your SPIFFS. Read the disclaimer.
 
