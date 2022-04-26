@@ -87,7 +87,7 @@ To Do: Eagle File PCB
 
 -MPU6050 (Install from Arduino IDE)
 
-- curveFitting (Install from the Arduino IDE)
+-curveFitting (Install from the Arduino IDE)
   
 
 # STEPS
