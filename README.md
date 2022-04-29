@@ -39,6 +39,9 @@ If your MPU6050 LED does not dim out during deep sleep, you can add a diode betw
 
 ![fritzing](https://user-images.githubusercontent.com/38969599/134767227-71fb867e-a20a-452b-9e15-7dcf1a5275a0.jpg).
   
+![ESP32-E-Firebeetle_bb](https://user-images.githubusercontent.com/38969599/166079497-e4310389-89d5-4a1f-8633-5b83121705f4.jpg)
+
+  
 My PCB was milled on a CNC. The design was done in Autocad Eagle. The GCODE was generated with PCB gecode setup (Eagle Addon). I also tin plated the pcb
  
  
