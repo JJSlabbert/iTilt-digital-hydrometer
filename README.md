@@ -13,6 +13,8 @@ More info on the iSpindel is available at https://www.ispindel.de/docs/README_en
 
 The standard original iSpindel firmware code was developed in PlatformIO and publishes data to Ubidots, Bierbot Bricks, Blynk etc and few other services. This original source code is complicated (for me) and I wanted something more simplified publishing to Cayenne https://cayenne.mydevices.com/ since I use Cayenne for my other projects. The ESP32 Hardware also provides a better power saving mode (hibernation) compared to the iSpindel ESP8266 DeepSleep. Especially the ESP32-E Firebeetle is ultra-low on power consumption.
 
+https://www.youtube.com/watch?v=O0lS2KwqAwQ&t=261s
+
 # Diffirences between this firmware/Hardware and the standard original iSpindel
 
 <table border="1"><tr><td> <b>iTilt</b></td><td> <b>iSpindel</b></td></tr>
