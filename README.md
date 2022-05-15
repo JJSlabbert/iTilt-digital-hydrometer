@@ -49,8 +49,7 @@ My PCB was milled on a CNC. The design was done in Autocad Eagle. The GCODE was 
  
 ![tinplated](https://user-images.githubusercontent.com/38969599/159095224-27a51cba-ba5b-4123-bd0e-2ce49d94e2ba.jpg)
   
-
-![Build_Instructions](https://user-images.githubusercontent.com/38969599/168466026-3fb0d033-2168-4235-8ada-bac99e13894e.jpg)
+![ESP32-Firebeetle2_iTilt](https://user-images.githubusercontent.com/38969599/168466388-4a4ba209-b311-45ef-a847-e535d527e926.png)
 
  
 1) Create a PCB using CNC or etching.
