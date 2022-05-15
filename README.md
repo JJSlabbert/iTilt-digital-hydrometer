@@ -50,25 +50,24 @@ My PCB was milled on a CNC. The design was done in Autocad Eagle. The GCODE was 
 ![tinplated](https://user-images.githubusercontent.com/38969599/159095224-27a51cba-ba5b-4123-bd0e-2ce49d94e2ba.jpg)
   
 
- ![Build_Instructions](https://user-images.githubusercontent.com/38969599/159097547-585856f2-f087-415d-bd53-e777fad79960.jpg)
+![Build_Instructions](https://user-images.githubusercontent.com/38969599/168466026-3fb0d033-2168-4235-8ada-bac99e13894e.jpg)
+
  
 1) Create a PCB using CNC or etching.
   
-2) Solder 0 Ohms resistors between (1 and 2) and (7 and 8).
+2) Solder the voltage divider. 4.7KOhms between 1 and 2, 10 KOhms between 3 and 4.
   
-3) Solder the voltage divider. 4.7KOhms between 3 and 5, 10 KOhms between 4 and 6.
+3) Solder the push button (Reset).
   
-4) Solder the push button (Reset).
+4) Solder the DS18B20. Make sure about polarity and use a 4.7KOhms resister between data and 3.3v.
   
-5) Solder the DS18B20. Make sure about polarity and use a 4.7KOhms resister between data and 3.3v.
+5) Solder the MPU6050.
   
-6) Solder the MPU6050.
+6) Solder the ESP32 Firebeetle.
   
-7) Solder the ESP32 Firebeetle.
+7) Reform (narrow) your battery holder with about 5mm to ensure it does not push agains solder joins.
   
-8) Reform (narrow) your battery holder with about 5mm to ensure it does not push agains solder joins.
-  
-9) Attach the battery holder. When you insert the battery, check your polarity.
+8) Attach the battery holder. When you insert the battery, check your polarity.
   
 
   
