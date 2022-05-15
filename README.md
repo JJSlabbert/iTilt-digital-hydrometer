@@ -54,7 +54,7 @@ My PCB was milled on a CNC. The design was done in Autocad Eagle. The GCODE was 
  
 1) Create a PCB using CNC or etching.
   
-2) Solder the voltage divider. 4.7KOhms between 1 and 2, 10 KOhms between 3 and 4.
+2) Solder the voltage divider. 4.7KOhms resistor between 1 and 2, 10 KOhms resistor between 3 and 4.
   
 3) Solder the push button (Reset).
   
