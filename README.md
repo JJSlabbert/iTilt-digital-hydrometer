@@ -68,6 +68,8 @@ My PCB was milled on a CNC. The design was done in Autocad Eagle. The GCODE was 
   
 8) Attach the battery holder. When you insert the battery, check your polarity.
   
+  <B>More Info at https://www.instructables.com/ITilt-Beer-Hydrometer/ </B>
+  
 
   
   <B>RECOMENDED BATTERY:</B>
